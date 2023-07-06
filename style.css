@@ -1,0 +1,200 @@
+body{
+  background-color: #83c3e6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  }
+
+#main p{
+  font-family: arial;
+}
+#welcome{
+  text-align: right;
+  margin-right: 40px;
+}
+#nav{
+  background-color: #0066cc;
+  height: 60px;
+}
+
+#nav ul {
+  float: right;
+  margin: 0;
+  margin-right: 30px;
+  padding: 0;
+  display: inline;
+  }
+  #nav ul li {
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 0 20px;
+  font-size: 20px;
+  }
+  #nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 0 15px;
+    line-height: 60px;
+
+}
+#nav ul li a:hover {
+    font-weight: bold;
+    background-color: #dbdbdb;
+    color: blue;
+    display: block;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+  #nav ul li ul {
+  position: absolute;
+  width: auto;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  }
+  #nav ul li ul li {
+    background: darkblue;
+    display: block;
+    color: #fff;
+    }
+
+    #nav ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    }
+  #intro{
+    background-color:#6dd9e6;
+    background-size: 100%;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+
+  }
+  #intro img{
+    display: block;
+    margin: auto;
+    width: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-left: 30px;
+  }
+  #intro h1{
+    font-size: 50px;
+  }
+  #intro p{
+    font-size: 20px;
+  }
+  #about{
+    text-align: center;
+    padding: 40px;
+}
+#about img{
+  width: 140px;
+  border-radius: 50%;
+}
+
+#why-us{
+  background-color:#0787b5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  width: 75%;
+  padding: 30px;
+  margin: 50px auto;
+}
+#why-us h2{
+  font-size: 50px;
+}
+#why-us img{
+    width: 100%;
+}
+
+#contact{
+  height: 120px;
+  color: white;
+  padding: 20px;
+}
+footer{
+  text-align: center;
+  background-color: #338ac9;
+  padding: 10px;
+
+}
+
+
+#contactleft{
+  float:left;
+  padding-left: 12%;
+  position: sticky;
+}
+#contactright{
+  float: right;
+  padding-right: 12%;
+  position: sticky;
+}
+#socialbar{
+    list-style: none;
+    padding-right: 10px;
+}
+#socialbar li{
+  display: inline;
+  padding: 5px;
+}
+#socialbar img{
+  width: 50px;
+}
+#p2{
+  margin-right: 10px;
+}
+
+#appointment {
+	background-color: #05b0fa;
+		padding: 15px;
+		margin: 15px auto;
+		width: 50%;
+		border: 2px solid gray;
+		border-radius: 15px;
+		margin-bottom: 35px;
+}
+#login {
+	background-color: #05b0fa;
+		padding: 15px;
+		margin: 15px auto;
+		width: 40%;
+		border: 2px solid gray;
+		border-radius: 15px;
+		margin-bottom: 35px;
+}
+#signup {
+	background-color: #05b0fa;
+		padding: 15px;
+		margin: 15px auto;
+		width: 40%;
+		border: 2px solid gray;
+		border-radius: 15px;
+		margin-bottom: 35px;
+}
+#search{
+	background-color: #05b0fa;
+		padding: 15px;
+		margin: 15px auto;
+		width: 40%;
+		border: 2px solid gray;
+		border-radius: 15px;
+		margin-bottom: 35px;
+}
+
+
+
+#desc img{
+  width: 300px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+#desc p{
+  padding-right: 100px;
+}

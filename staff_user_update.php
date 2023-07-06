@@ -1,0 +1,147 @@
+<?php
+session_start();
+
+//connect to database
+require_once('connection.php');
+
+if(isset($_POST['update'])){
+	$userid = $_POST['UserId'];
+	$name = $_POST['Name'];
+	$phoneno =$_POST['PhoneNo'];
+	$email =$_POST['Email'];
+
+    $query = "UPDATE user SET Name= '$name', PhoneNo = '$phoneno', Email = '$email' WHERE UserID='$userid'";
+    $result = mysqli_query($conn, $query);
+
+        if($result){
+            echo "<script>alert('Record updated successfully!')</script>";
+            header('Refresh: 0; url=staff_user_view.php');
+        }else{
+            echo "<script>alert('Failed to update record! Please try again!')</script>";
+
+        }
+
+    //do update process
+
+}else{
+    //do show data to form
+    $userid = $_GET['UserID'];
+}
+    $sql = "SELECT * FROM user WHERE UserID = '$userid'";
+    $data = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($data);
+
+    mysqli_close($conn);
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Elderly Home's Club</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/logo1.jpg">
+    <script>
+			function printContent(el){
+				var restorepage = document.body.innerHTML;
+				var printContent = document.getElementById(el).innerHTML;
+				document.body.innerHTML = printContent;
+				window.print();
+				document.body.innerHTML = restorepage;
+			}
+		</script>
+  </head>
+
+  <body>
+
+
+
+
+<!-- Intro -->
+<div id="intro">
+    <?php include('staff_header.php');?>
+</div>
+
+
+<!-- navbar element -->
+<div id="nav">
+    <?php include('staff_menu.php');?>
+</div>
+				
+<div id="main">
+	<div id="appointment">
+	<center>
+	<h1>Update Appointment Record</h1>
+		<form action="staff_update.php" method="POST">
+		<!--appointment record table-->
+			<table width="90%" border ="0" cellpadding="10" cellspacing="20">
+				<tr>
+				<td>User ID :</td>
+				<td><input readonly type="text" name="UserID" value="<?php echo $ICNo;?>"> </td>
+				</tr>
+                <tr>
+					<td>Password :</td>
+					<td><input readonly type="password" name="Password" value="<?php echo $row['Password']; ?>"> </td>
+				</tr>
+				<tr>
+					<td>Name :</td>
+					<td><input type="text" name="Name" value="<?php echo $row['Name']; ?>"> </td>
+				</tr>
+
+				<tr>
+					<td>Phone Number:</td>
+					<td><input type="text" name="PhoneNo" value="<?php echo $row['PhoneNo']; ?>"> </td>
+				</tr>
+
+				<tr>
+					<td>Email :</td>
+					<td><input type="text" name="Email" value="<?php echo $row['Email']; ?>"> </td>
+				</tr>
+
+				<tr>
+				<td>Status :</td>
+				<td>
+					<select name="status" style="width:100px; height:30px">
+                        <option readonly>-<?php echo $row['Status']; ?>-</option>
+					</select>
+				</td>
+				</tr>
+
+
+
+
+				<tr>
+	<td colspan="2" align="center"><input type="submit" name="update" value="Update"></td>
+</tr>
+			</table>
+		</form>
+		</center>
+	</div>
+</div>
+
+<!-- footer element -->
+<footer>
+ <?php include('footer.php'); ?>
+</footer>
+<script>
+			function resizeText(multiplier){
+			if(document.body.style.fontSize == ""){
+				document.body.style.fontSize = "1.0em";
+
+			}
+			document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.1) + "em";
+
+		}
+
+			function checkdelete()
+  			{
+    		return confirm('Are you sure you want to clear this record?');
+  			}
+
+	</script>
+  </body>
+</html>
