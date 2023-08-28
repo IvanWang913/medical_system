@@ -37,11 +37,24 @@
 </div>
 
 <div id="location">
-  <h2>Location</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1466274544086!2d101.69837271468897!3d3.0554056977749697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1667923400700!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <h2>The Elderly Home's Club</h2>
-  <p>Jalan Teknologi 5, Taman Teknologi Malaysia, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
+<table>
+  <tr>
+    <td><h2>Location</h2></td>
+  </tr>
+  <tr>
+    <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1466274544086!2d101.69837271468897!3d3.0554056977749697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2smy!4v1667923400700!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+</tr>
+<tr>
+  <td><h2>The Elderly Home's Club</h2></td>
+</tr>
+<tr>
+  <td><p>Jalan Teknologi 5, Taman Teknologi Malaysia, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p></td>
+    </tr>
+     
+  </table>
+
 </div>
+
 </div>
 
 <!-- footer element -->

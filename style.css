@@ -188,8 +188,6 @@ footer{
 		margin-bottom: 35px;
 }
 
-
-
 #desc img{
   width: 300px;
   padding-left: 100px;
@@ -197,4 +195,7 @@ footer{
 }
 #desc p{
   padding-right: 100px;
+}
+#location table{
+  padding: 20px 100px;
 }

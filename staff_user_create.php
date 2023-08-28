@@ -7,7 +7,7 @@ if(isset($_POST['signup_btn']))
 {
 	//Declare variables
 	$userid = $_POST['uname'];
-    	$password = $_POST['pwd'];
+    $password = $_POST['pwd'];
 	$cpassword = $_POST['cpwd'];
 	$name = $_POST['name'];
 	$status = $_POST['status'];
@@ -136,10 +136,10 @@ mysqli_close($conn);
 				<td align="right">Status :</td>
 				<td>
 					<select name="status" style="width:100px; height:30px">
-                        		<option hidden selected>--Select status--</option>
-					<option value="User" name="user">User</option>
-                        		<option value="Doctor" name="doctor">Doctor</option>
-                        		<option value="Staff" name="staff">Staff</option>
+                        <option hidden selected>--Select status--</option>
+						<option value="User" name="user">User</option>
+                        <option value="Doctor" name="doctor">Doctor</option>
+                        <option value="Staff" name="staff">Staff</option>
 					</select>
 				</td>
 			</tr>
@@ -163,19 +163,19 @@ mysqli_close($conn);
  <?php include('footer.php'); ?>
 </footer>
 <script>
-function resizeText(multiplier){
-if(document.body.style.fontSize == ""){
-	document.body.style.fontSize = "1.0em";
+			function resizeText(multiplier){
+			if(document.body.style.fontSize == ""){
+				document.body.style.fontSize = "1.0em";
 
-}
-document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.1) + "em";
+			}
+			document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.1) + "em";
 
-}
+		}
 
-function checkdelete()
-{
-	return confirm('Are you sure you want to delete this record?');
-}
+			function checkdelete()
+  			{
+    		return confirm('Are you sure you want to delete this record?');
+  			}
 
 	</script>
   </body>
